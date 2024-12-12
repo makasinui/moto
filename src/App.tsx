@@ -41,7 +41,7 @@ function App() {
                         <div
                             key={item.id}
                             style={{ background: item.color }}
-                            className={`max-h-[60px] flex items-center justify-between min-w-[140px] h-full rounded-xl overflow-hidden`}>
+                            className={`max-h-[60px] flex items-center justify-between min-w-[140px] h-full rounded-xl overflow-hidden zoom`}>
                             <span className="text-xs pl-1">{item.name}</span>
                             <img
                                 className="max-w-[51px] relative"
