@@ -23,7 +23,7 @@ export default function CategoryBlock({ category }: { category: ICategory }) {
             <div className="flex flex-nowrap gap-2 overflow-auto no-scrollbar">
                 {activeTab.items.map((item) => (
                     <div
-                        className="flex flex-col min-w-[33.3%] basis-1/3"
+                        className="flex flex-col min-w-[33.3%] basis-1/3 zoom"
                         key={item.id}>
                         <img
                             className="rounded-lg max-h-[86px] h-full object-cover"

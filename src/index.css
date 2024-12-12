@@ -19,10 +19,10 @@
     transition: 0.3s all;
   }
 
-  .zoom:hover, .zoom:focus {
+  .zoom:active {
     -ms-transform: scale(0.8);
     -webkit-transform: scale(0.8);
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 }
 
