@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('./assets/font/Mulish-Medium.ttf');
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .zoom {
+    transition: 0.3s all;
+  }
+
+  .zoom:hover, .zoom:focus {
+    -ms-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Mulish';
+}
