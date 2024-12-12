@@ -20,9 +20,9 @@
   }
 
   .zoom:hover, .zoom:focus {
-    -ms-transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    transform: scale(1.02);
+    -ms-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
