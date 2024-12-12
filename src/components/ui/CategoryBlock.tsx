@@ -26,7 +26,7 @@ export default function CategoryBlock({ category }: { category: ICategory }) {
                         className="flex flex-col min-w-[33.3%] basis-1/3"
                         key={item.id}>
                         <img
-                            className="rounded-lg max-h-[86px] h-full object-contain"
+                            className="rounded-lg max-h-[86px] h-full object-cover"
                             src={item.img}
                         />
                         <span className="pt-1 text-silver text-sm">{item.title}</span>
