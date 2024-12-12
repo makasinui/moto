@@ -4,7 +4,7 @@ const categories: ICategory[] = [
     {
         id: 1,
         name: 'Брови и ресницы',
-        img: '/src/assets/img/category/1.png',
+        img: '/category/1.png',
         color: '#ECEBEB',
         tabs: [
             {
@@ -17,7 +17,7 @@ const categories: ICategory[] = [
                         location: 'Чанггу',
                         isVisit: 'да',
                         idr: 400000,
-                        img: '/src/assets/img/category/f_1.png'
+                        img: '/category/f_1.png'
                     },
                     {
                         id: 2,
@@ -25,7 +25,7 @@ const categories: ICategory[] = [
                         location: 'Чанггу',
                         isVisit: 'да',
                         idr: 400000,
-                        img: '/src/assets/img/category/f_2.png'
+                        img: '/category/f_2.png'
                     }, 
                     {
                         id: 3,
@@ -33,7 +33,7 @@ const categories: ICategory[] = [
                         location: 'Чанггу',
                         isVisit: 'да',
                         idr: 400000,
-                        img: '/src/assets/img/category/f_3.png'
+                        img: '/category/f_3.png'
                     }
                 ]
 
@@ -48,7 +48,7 @@ const categories: ICategory[] = [
                         location: 'Чанггу',
                         isVisit: 'да',
                         idr: 400000,
-                        img: '/src/assets/img/category/f_3.png'
+                        img: '/category/f_3.png'
                     },
                     {
                         id: 2,
@@ -56,7 +56,7 @@ const categories: ICategory[] = [
                         location: 'Чанггу',
                         isVisit: 'да',
                         idr: 400000,
-                        img: '/src/assets/img/category/f_2.png'
+                        img: '/category/f_2.png'
                     }, 
                     {
                         id: 3,
@@ -64,7 +64,7 @@ const categories: ICategory[] = [
                         location: 'Чанггу',
                         isVisit: 'да',
                         idr: 400000,
-                        img: '/src/assets/img/category/f_1.png'
+                        img: '/category/f_1.png'
                     }
                 ]
             }
@@ -73,7 +73,7 @@ const categories: ICategory[] = [
     {
         id: 2,
         name: 'Волосы',
-        img: '/src/assets/img/category/2.png',
+        img: '/category/2.png',
         color: "#E4CDFF",
         tabs: [
             {
@@ -86,7 +86,7 @@ const categories: ICategory[] = [
                         location: 'Чанггу',
                         isVisit: 'да',
                         idr: 400000,
-                        img: '/src/assets/img/category/f_1.png'
+                        img: '/category/f_1.png'
                     }
                 ]
 
@@ -96,7 +96,7 @@ const categories: ICategory[] = [
     {
         id: 3,
         name: 'Ногти',
-        img: '/src/assets/img/category/3.png',
+        img: '/category/3.png',
         color: '#F5C1D4',
         tabs: [
             {
@@ -109,7 +109,7 @@ const categories: ICategory[] = [
                         location: 'Чанггу',
                         isVisit: 'да',
                         idr: 400000,
-                        img: '/src/assets/img/category/f_1.png'
+                        img: '/category/f_1.png'
                     }
                 ]
 

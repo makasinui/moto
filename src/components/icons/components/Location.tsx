@@ -9,8 +9,8 @@ export default function Location() {
             <path
                 d="M10 10.8333V17.5M10 10.8333C12.3012 10.8333 14.1667 8.96785 14.1667 6.66667C14.1667 4.36548 12.3012 2.5 10 2.5C7.69882 2.5 5.83334 4.36548 5.83334 6.66667C5.83334 8.96785 7.69882 10.8333 10 10.8333Z"
                 stroke="#B7A7B3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
         </svg>
     );
