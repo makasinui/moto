@@ -83,7 +83,7 @@ function App() {
                         <h2 className="text-2xl text-center">Add photo</h2>
                         <h3 className="pt-3 text-sm">First foto will be displsayed on main. Make sure it is a good foto.</h3>
                         <div className="w-full flex flex-wrap justify-between gap-3 mt-6">
-                            {files.map((item, i) =>
+                            {files.map((_item, i) =>
                                 i !== 5 ? (
                                     <AddPhoto
                                         big={i === 0}
