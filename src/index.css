@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Mulish';
-  src: url('./assets/font/Mulish-Medium.ttf');
+  font-family: 'Gilroy';
+  src: url('./assets/font/Gilroy-Light.otf');
 }
 
 @layer utilities {
@@ -28,5 +28,5 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Mulish';
+  font-family: 'Gilroy';
 }

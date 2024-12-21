@@ -1,4 +1,4 @@
-import { ArrowLeft, Location, Search, Settings } from "./components"
+import { Trash, Camera, ArrowLeft } from "./components"
 
 type TIconProps = {
     type: string
@@ -7,9 +7,8 @@ type TIconProps = {
 
 export default function Icon({ type }: TIconProps) {
     return {
-        'arrow-left': <ArrowLeft />,
-        'location': <Location />,
-        'search': <Search />,
-        'settings': <Settings />
+        'trash': <Trash />,
+        'camera': <Camera />,
+        'arrow-left': <ArrowLeft />
     }[type]
 }
