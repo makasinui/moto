@@ -30,7 +30,7 @@ export default function AddPhoto({ onAdd, deleteFile, big = false, image }: IPro
     return (
         <div
             className={`${
-                big ? 'w-full h-[220px]' : 'w-[175px] h-[98px]'
+                big ? 'w-full h-[220px] col-span-2' : 'h-[98px]'
             } bg-[#323131] flex items-center justify-center flex-col rounded-xl gap-3 zoom`}
             onClick={() => {
                 if (image?.length) return;

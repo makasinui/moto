@@ -40,7 +40,7 @@ function App() {
     };
 
     return (
-        <main className="bg-[#080808] text-[#B4B4B4] h-svh">
+        <main className="bg-[#080808] text-[#B4B4B4] min-h-svh">
             <header className="py-[13px] px-4">
                 <div onClick={prevStep}>
                     <Icon type="arrow-left" />
@@ -62,8 +62,21 @@ function App() {
                                 </button>
                             ))}
                         </div>
+                        {step === 5 && (
+                            <div className="flex flex-col h-full w-full mt-[50px]">
+                            <div className="w-full flex items-center gap-3 px-4">
+                                <input
+                                    type="text"
+                                    className="px-3 w-full rounded-xl bg-[#080808] border py-3"
+                                />
+                            </div>
+                            <div onClick={nextStep} className="absolute zoom bottom-8 py-3 rounded-xl left-4 max-w-[calc(100%-32px)] flex items-center justify-center w-full bg-[#323131]">
+                                Next
+                            </div>
+                        </div>
+                        )}
                         {step === 6 && (
-                            <div className="flex flex-col h-full w-full">
+                            <div className="flex flex-col h-full w-full ">
                                 <div className="w-full flex items-center gap-3">
                                     <input
                                         type="text"
@@ -79,10 +92,10 @@ function App() {
                     </div>
                 ))}
                 {step === 7 ? (
-                    <div className="flex mt-[100px] items-center justify-center flex-col">
+                    <div className="flex mt-[100px] items-center justify-center flex-col pb-4">
                         <h2 className="text-2xl text-center">Add photo</h2>
                         <h3 className="pt-3 text-sm">First foto will be displsayed on main. Make sure it is a good foto.</h3>
-                        <div className="w-full flex flex-wrap justify-between gap-3 mt-6">
+                        <div className="w-full grid grid-cols-2 justify-between gap-3 mt-6">
                             {files.map((_item, i) =>
                                 i !== 5 ? (
                                     <AddPhoto
