@@ -8,9 +8,8 @@ import SwitchesStep from './components/steps/SwitchesStep';
 
 function App() {
     const [step, setStep] = useState(0);
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [files, setFiles] = useState(['']);
-
+    console.log(files)
     const nextStep = () => {
         setStep(step + 1);
     };
