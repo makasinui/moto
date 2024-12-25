@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Switch from "../ui/Switch";
 
 interface IProps {
