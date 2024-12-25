@@ -9,8 +9,8 @@ export default function SwitchesStep({ switches, nextStep }: IProps) {
     
     
     return (
-        <div className="flex flex-col h-full w-full ">
-            <div>
+        <div className="flex flex-col gap-[18px] h-full w-full ">
+            <div className="flex flex-col gap-[18px]">
                 {switches?.map((item) => (
                     <Switch
                         key={item}
