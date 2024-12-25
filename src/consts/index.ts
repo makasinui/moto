@@ -1,3 +1,8 @@
+import { getPastYears } from "../utils";
+
+const yearsArr = getPastYears();
+console.log(yearsArr)
+
 export const stepsData = [
     {
         step: 0,
@@ -22,7 +27,7 @@ export const stepsData = [
     {
         step: 4,
         title: 'Please, choose year',
-        buttons: ['2024', '2023', '2022', '2021', '2020', '2019', '2018']
+        buttons: yearsArr
     },
     {
         step: 5,
@@ -32,5 +37,10 @@ export const stepsData = [
     {
         step: 6,
         title: 'Please, add odometr',
+    },
+    {
+        step: 7,
+        title: '',
+        switches: ['Нужен шлем', 'Держатель телефона', 'Дождевик']
     }
 ]

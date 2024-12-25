@@ -7,8 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        'pink': '#FFEEFB',
-        'silver': '#B7A7B3',
+        'light': '#323131',
+        'light-dark': '#B4B4B4',
+        'accent': '#2153e8',
+        'accent-dark': '#E82521'
       },
       backgroundImage: {
         'to-right': 'radial-gradient(50% 100% at 50% 0%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.025) 100%)',

@@ -31,7 +31,7 @@ export default function AddPhoto({ onAdd, deleteFile, big = false, image }: IPro
         <div
             className={`${
                 big ? 'w-full h-[220px] col-span-2' : 'h-[98px]'
-            } bg-[#323131] flex items-center justify-center flex-col rounded-xl gap-3 zoom`}
+            } bg-[#323131] flex items-center justify-center flex-col rounded-xl gap-3 zoom relative`}
             onClick={() => {
                 if (image?.length) return;
                 openFile();
@@ -49,14 +49,14 @@ export default function AddPhoto({ onAdd, deleteFile, big = false, image }: IPro
                     />
                 </>
             ) : (
-                <div className="relative h-full">
+                <div className="h-full">
                     <div onClick={deleteFile} className="p-2 absolute right-2 bottom-2 bg-[#B4B4B4] rounded-xl">
                         <Icon type="trash" />
                     </div>
                     <img
                         src={image as string}
                         alt=""
-                        className="rounded-xl w-full h-full"
+                        className="rounded-xl w-full h-full object-cover"
                     />
                     {big ? (
                         <div className="absolute top-2 left-2 bg-[#B4B4B4] rounded-xl text-xs text-[#171717] px-5 py-2">Main photo</div>

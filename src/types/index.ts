@@ -1,18 +1,11 @@
-export interface IBike {
-    id: number;
-    plate: string;
-    owner_id: number;
-    status: number
-    top: boolean
-    payed: boolean | null
-    ready_date: Date | null
+export interface IBrand {
     brand: string
+}
+
+export interface IModel {
     model: string
-    type: string
-    cc: null | boolean
+}
+
+export interface IColor {
     color: string
-    wr: boolean
-    stnk: boolean
-    year: number
-    
 }
