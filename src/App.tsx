@@ -6,6 +6,7 @@ import { stepsData } from './consts';
 import PhotoStep from './components/steps/PhotoStep';
 import SwitchesStep from './components/steps/SwitchesStep';
 import { httpGetAllBrands, httpGetAllColors, httpGetAllModels } from './api';
+import Switch from './components/ui/Switch';
 
 function App() {
     const [step, setStep] = useState(0);
@@ -59,6 +60,17 @@ function App() {
                         key={item.step}
                         className={`${step === item.step ? 'flex' : 'hidden'} mt-[100px] items-center justify-center flex-col`}>
                         <h2 className="text-2xl text-center">{item.title}</h2>
+                        {step === 3 && (
+                            <div className='w-full mt-6'>
+                                {item.switches?.map((item) => (
+                                    <Switch
+                                        key={item.id}
+                                        onChange={(e) => item.value = e}
+                                        label={item.title}
+                                    />
+                                ))}
+                            </div>
+                        )}
                         <div className={`grid w-full gap-2 grid-cols-2 mt-[56px] `}>
                             {item?.buttons?.map((btn, i) => (
                                 <button

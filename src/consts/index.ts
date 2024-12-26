@@ -25,6 +25,14 @@ export const stepsData = [
     {
         step: 3,
         title: 'Please, choose color',
+        switches: [
+            {
+                id: 0,
+                title: 'Wrapped',
+                key: 'wr',
+                value: false,
+            },
+        ],
         buttons: ['BLACK', 'BLUE', 'BROWN', 'CREAM'],
         value: '',
     },
