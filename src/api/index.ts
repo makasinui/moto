@@ -1,9 +1,11 @@
 import { httpGetAllBrands, httpGetAllModels } from "./bikes";
+import { httpGetAllColors } from "./colors";
 
-const url = 'https://api.onetests.site/allbikes/brands';
+const url = 'https://api.onetests.site/';
 
-export  {
+export {
     url,
     httpGetAllBrands,
-    httpGetAllModels
+    httpGetAllModels,
+    httpGetAllColors
 }

@@ -1,16 +1,33 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Icon from './components/icons/Icon';
 
 import { stepsData } from './consts';
 import PhotoStep from './components/steps/PhotoStep';
 import SwitchesStep from './components/steps/SwitchesStep';
+import { httpGetAllBrands, httpGetAllColors, httpGetAllModels } from './api';
 
 function App() {
     const [step, setStep] = useState(0);
     const [files, setFiles] = useState(['']);
-    console.log(files)
-    const nextStep = () => {
+    console.log(files);
+
+    const nextStep = async () => {
+        if(step === 0) {
+            if(stepsData[0].value === 'motorbike') {
+                const data = await httpGetAllBrands();
+                const brandData = data.map(item => item.brand)
+                stepsData[1].buttons = brandData;
+                console.log(stepsData)
+            }
+        }
+
+        if(step === 1) {
+            const data = await httpGetAllModels(stepsData[1].value as string);
+            const modelData = data.map(item => item.model);
+            stepsData[2].buttons = modelData;
+        }
+
         setStep(step + 1);
     };
 
@@ -18,6 +35,16 @@ function App() {
         if (step === 0) return;
         setStep(step - 1);
     };
+
+    useEffect(() => {
+        const fetchColors = async () => {
+            const data = await httpGetAllColors();
+            const colorsData = data.map((item) => item.color);
+            stepsData[3].buttons = colorsData;
+        }
+
+        fetchColors();
+    }, []);
 
     return (
         <main className="dark:bg-[#080808] bg-white dark:text-light-dark text-light min-h-svh">
@@ -36,7 +63,10 @@ function App() {
                             {item?.buttons?.map((btn, i) => (
                                 <button
                                     key={i}
-                                    onClick={nextStep}
+                                    onClick={() => {
+                                        item.value = btn
+                                        nextStep();
+                                    }}
                                     className={`bg-[#323131] w-full text-white py-3 zoom rounded-lg active:dark:bg-accent-dark active:bg-accent`}>
                                     {btn.toUpperCase()}
                                 </button>
@@ -75,7 +105,7 @@ function App() {
                         )}
                         {step === 7 && (
                             <SwitchesStep
-                                switches={item.switches as string[]}
+                                switches={item.switches!}
                                 nextStep={nextStep}
                             />
                         )}

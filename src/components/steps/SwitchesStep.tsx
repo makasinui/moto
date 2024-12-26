@@ -1,21 +1,25 @@
 import Switch from "../ui/Switch";
 
 interface IProps {
-    switches: string[]
+    switches: {
+        id: number
+        title: string
+        value: boolean
+        key: string
+    }[]
     nextStep: () => void
 }
 
 export default function SwitchesStep({ switches, nextStep }: IProps) {
-    
     
     return (
         <div className="flex flex-col gap-[18px] h-full w-full ">
             <div className="flex flex-col gap-[18px]">
                 {switches?.map((item) => (
                     <Switch
-                        key={item}
-                        onChange={(e) => console.log(e)}
-                        label={item}
+                        key={item.id}
+                        onChange={(e) => item.value = e}
+                        label={item.title}
                     />
                 ))}
             </div>

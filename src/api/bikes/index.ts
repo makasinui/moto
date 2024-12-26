@@ -1,10 +1,10 @@
 import axios from "axios";
-import { IBrand } from "../../types";
+import { IBrand, IModel } from "../../types";
 import { url } from '../';
 
-const bikeUrl = `${url}/allbikes`
 
 const httpGetAllBrands = async (): Promise<IBrand[]> => {
+    const bikeUrl = `${url}/allbikes`
     try {
         const { data } = await axios.get(`${bikeUrl}/brands`);
         return data;
@@ -15,7 +15,8 @@ const httpGetAllBrands = async (): Promise<IBrand[]> => {
     return [];
 }
 
-const httpGetAllModels = async (brand: string): Promise<IBrand[]> => {
+const httpGetAllModels = async (brand: string): Promise<IModel[]> => {
+    const bikeUrl = `${url}/allbikes`
     try {
         const { data } = await axios.get(`${bikeUrl}/models/${brand}`);
         return data;
